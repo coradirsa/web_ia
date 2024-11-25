@@ -15,6 +15,9 @@ const geistMono = localFont({
 export const metadata = {
   title: "Coradir IA",
   description: "Coradir IA",
+  icons: {
+    icon: '/favicon.ico'
+  },
   robots: {
     index: false,
     follow: true,
