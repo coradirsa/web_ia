@@ -1,9 +1,22 @@
-version: "3.7"
+version: "3.9"
+
 services:
   frontend:
     build:
       context: .
       dockerfile: Dockerfile
+    networks:
+      - caddy
     restart: always
     ports:
       - "3000:3000"
+    labels:
+      - caddy=coradir.ai
+      - caddy.reverse_proxy="{{upstreams 3000}}"
+    environment:
+      - NODE_ENV=production
+
+networks:
+  caddy:
+    name: caddy
+    external: true
