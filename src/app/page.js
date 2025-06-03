@@ -4,6 +4,7 @@ import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Home from "./components/home";
 import Products from "./components/products/products";
+import Solutions from "./components/solutions/solutions";
 
 export default function Page() {
   return (
@@ -11,6 +12,7 @@ export default function Page() {
         <Header />
         <Home />
         <Products />
+        <Solutions />
         <Footer />
     </>
   );
