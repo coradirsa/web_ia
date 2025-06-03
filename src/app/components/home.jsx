@@ -13,12 +13,7 @@ export default function Home() {
                 <Button 
                     element="mas información"
                     type="button"
-                    className="
-                        bg-black/70 rounded-full px-0 py-2 text-white uppercase font-bold w-52  
-                        shadow-sm shadow-white/40
-                        hover:bg-black/80 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]
-                        transition-all duration-300
-                    "
+                    className=" bg-background rounded-full px-0 py-2 text-white w-52 hover:bg-black/80 "
                 />
             </div>
         </section>
