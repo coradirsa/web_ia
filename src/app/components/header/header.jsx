@@ -13,8 +13,8 @@ export default function Header() {
     const { scrollY } = useScroll(); 
     const isMobile = useMediaQuery("(max-width: 800px)"); 
   return (
-    <header className={`flex items-center justify-center container w-full h-20 gap-3 xl:gap-10 p-5 py-14 top-0 z-50 sticky
-        ${scrollY > 0 ? "bg-background/70 backdrop-blur-md shadow-lg" : ""}
+    <header className={`flex items-center justify-center container w-full h-20 gap-3 xl:gap-10 p-5 py-5 top-0 z-50 sticky transition-all duration-300 ease-in-out
+        ${scrollY > 0 ? "bg-black/30 backdrop-blur-md shadow-lg" : ""}
         ${isMobile ? "h-16" : "h-20"}`}
 
     >
