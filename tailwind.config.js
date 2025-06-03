@@ -13,6 +13,9 @@ module.exports = {
         blueligth: "var(--color-blueligth)",
         gray: "var(--color-gray)"
       },
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
     },
   },
   plugins: [],

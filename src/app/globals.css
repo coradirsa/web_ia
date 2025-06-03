@@ -1,7 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* Fuentes */
+@font-face {
+  font-family: 'Monserrat';
+  src: url('/src/app/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 :root { 
   --background: #001c24;
   --color-white: #ffffff;
