@@ -13,15 +13,15 @@
   --background: #001c24;
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-blueligth: #d1f2ff;
-  --color-gray: #666666;
+  --color-blueligth: #4a5e63;
+  --color-gray: #4d6066;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #001c24; 
     --color-white: #001c24;
-    --color-blueligth: #0698d1;
+    --color-blueligth: #4a5e63;
   }
 }
 
