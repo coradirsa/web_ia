@@ -10,7 +10,8 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        blueligth: "var(--blueligth)",
+        blueligth: "var(--color-blueligth)",
+        gray: "var(--color-gray)"
       },
     },
   },

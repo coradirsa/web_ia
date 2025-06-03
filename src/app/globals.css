@@ -7,6 +7,7 @@
   --color-white: #ffffff;
   --color-black: #000000;
   --color-blueligth: #d1f2ff;
+  --color-gray: #666666;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,4 +21,43 @@
 .container{ 
   max-width: 1700px;
   margin: 0 auto;
+} 
+
+.box-fade-vertical {
+  position: relative;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Sombra arriba */
+.box-fade-vertical::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 2px;
+  border-radius: 16px 16px 0 0;
+  background: linear-gradient(
+    to right,
+    rgba(47,75,80,0.4) 0%,
+    rgba(47,75,80,0) 40%,
+    rgba(47,75,80,0) 60%,
+    rgba(47,75,80,0.4) 100%
+  );
+  pointer-events: none;
+}
+
+/* Sombra abajo */
+.box-fade-vertical::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; width: 100%; height: 2px;
+  border-radius: 0 0 16px 16px;
+  background: linear-gradient(
+    to right,
+    rgba(47,75,80,0.4) 0%,
+    rgba(47,75,80,0) 40%,
+    rgba(47,75,80,0) 60%,
+    rgba(47,75,80,0.4) 100%
+  );
+  pointer-events: none;
 }
