@@ -1,5 +1,6 @@
 'use client';
-
+ 
+import Contact from "./components/contact/contact";
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Home from "./components/home";
@@ -13,6 +14,7 @@ export default function Page() {
         <Home />
         <Products />
         <Solutions />
+        <Contact />
         <Footer />
     </>
   );

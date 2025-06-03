@@ -1,20 +1,7 @@
 'use client'
-import React, { useState } from 'react';
-import { Montserrat } from 'next/font/google'
-import { Upload, FileUp } from 'lucide-react';
-import Link from 'next/link';
-
-const montserrat = Montserrat({ 
-  subsets: ['latin'],
-  weight: ['800', '700'],
-  variable: '--font-montserrat'
-})
-
-const CopyrightFooter = () => (
-  <div className="text-center py-4 text-sm text-gray-600 ">
-    © {new Date().getFullYear()} CORADIR SA. Todos los derechos reservados.
-  </div>
-);
+import React, { useState } from 'react'; 
+import { Upload, FileUp } from 'lucide-react'; 
+  
 
 const ContactForm = () => {
     const [cvFileName, setCvFileName] = useState('');
@@ -33,34 +20,12 @@ const ContactForm = () => {
       <h1 className={`uppercase font-light text-white text-[50px]
                      border-b-2 border-[#00B7FF] pb-4
                      
-                     after:bg-[#3344ff] ${montserrat.className}`}>
+                     after:bg-[#3344ff]`}>
         Trabajá con nosotros
       </h1>
     </div>
   );
-
-  const BackButton = () => (
-    <Link 
-      href="/"
-      className="inline-flex items-center gap-2 text-[#00B7FF] hover:text-[#3344ff] mt-20"
-    >
-      <svg 
-        xmlns="http://www.w3.org/2000/svg" 
-        width="20" 
-        height="20" 
-        viewBox="0 0 24 24" 
-        fill="none" 
-        stroke="currentColor" 
-        strokeWidth="2" 
-        strokeLinecap="round" 
-        strokeLinejoin="round"
-        className="transition-transform group-hover:-translate-x-1"
-      >
-        <path d="M19 12H5M12 19l-7-7 7-7"/>
-      </svg>
-      Volver al inicio
-    </Link>
-  );
+ 
 
   return (
     <div className="max-w-[900px] mx-auto pt-8">
@@ -210,11 +175,7 @@ const ContactForm = () => {
           />
         </div>
       </form>
-      </div>
-      <BackButton />
-      <footer className="flex gap-6 flex-wrap items-center justify-center ">
-              <CopyrightFooter />
-            </footer>
+      </div> 
     </div>
 
   );
