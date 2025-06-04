@@ -6,8 +6,9 @@ export default function CardSolutions({icon, title, description}) {
         border-l-[2px] border-r-[2px] border-gray rounded-3xl box-fade-vertical xl:min-h-96 
         ">
             <Image 
+                ariaLabel={`icono-${title}`}
                 src={icon}
-                alt="icono-ahorro"
+                alt={`icono-${title}`}
                 width={100}
                 height={100}
                 className="w-10 h-10"

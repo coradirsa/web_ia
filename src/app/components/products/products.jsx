@@ -13,14 +13,16 @@ export default function Products() {
                         Diseñá tu ChatBot acorde a tus necesidades y marcá la diferencia ahora.
                     </p>
                     <Button 
+                        ariaLabel="Boton para acceder a la seccion de contacto"
                         element="Quiero un chatbot" 
                         type="button" 
                         className="relative bg-background rounded-full px-1 sm:px-5 py-1 w-44 sm:w-56 text-white sm:h-10 ml-5 sm:ml-16 text-xs sm:text-sm hover:bg-black hover:shadow-[0_0_15px_rgba(0,0,0,0.4)]"
                     />
                 </div>
                 <Image 
+                    ariaLabel="Mujer con telefono"
                     src="/img/woman-whit-phone.webp"
-                    alt="woman-whit-phone"
+                    alt="Mujer con telefono"
                     width={600}
                     height={600}
                     className="rounded-3xl shadow-[9px_-8px_10px_1px_gray]"

@@ -76,8 +76,9 @@ export default function Contact() {
                     Completá el formulario para recibir información sobre nuestros servicios de chatbot inteligente. Un representante de CORADIR IA te contactará a la brevedad.
                 </h4>
                 <Image 
+                    ariaLabel="logo-chatbot"
                     src="/img/chatbot.webp"
-                    alt="Hero"
+                    alt="logo-chatbot"
                     width={100}
                     height={100}
                     className="w-[300px] h-[300px] hidden md:block object-contain bg-white rounded-full p-2"
@@ -149,6 +150,7 @@ export default function Contact() {
                     {/* Botón de envío */}
                     <div className="w-full flex items-center justify-center">
                         <Button
+                            ariaLabel="Boton para enviar solicitud de chatbot"
                             type="submit"
                             disabled={isSubmitting}
                             className="bg-white rounded-full px-1 sm:px-5 py-3 w-56 text-background sm:h-10 text-xs sm:text-sm hover:bg-white/80 hover:shadow-[0_0_15px_rgba(0,0,0,0.4)]"

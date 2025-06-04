@@ -11,6 +11,7 @@ export default function Home() {
                 <p className="text-white text-sm sm:text-xl mb-10 sx:w-96">Desarrollamos soluciones inteligentes que responden por vos. <br/>
                 Inteligencia Artificial eficiente a tu alcance.</p>
                 <Button 
+                    ariaLabel="Boton para acceder a mas información sobre inteligencia artificial"
                     element="mas información"
                     type="button"
                     className=" bg-background rounded-full px-0 py-2 text-white text-sm w-44 sm:w-52 hover:bg-black/80 "

@@ -53,8 +53,9 @@ export default function Solutions() {
                 <h3 className="text-background text-3xl sm:text-5xl md:text-6xl font-bold tracking-tighter uppercase w-full">Soluciones infinitas</h3> 
                 <div className="relative flex items-center justify-start p-5 w-full overflow-hidden">
                     <Image 
+                        ariaLabel="Imagen de chat con un chatbot"
                         src="/img/chat.webp"
-                        alt="chat-chatbot"
+                        alt="Imagen de chat con un chatbot"
                         width={400}
                         height={400}
                         className="relative hidden md:block"

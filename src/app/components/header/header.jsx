@@ -32,6 +32,7 @@ export default function Header() {
                         <NavLink key={index} href={link.href} text={link.text} isBarrer={index !== navlinks.length - 1}/>
                     ))}
                     <Button 
+                        ariaLabel="Boton para acceder a la seccion de contacto"
                         element="contacto"
                         type="button"
                         className="bg-background rounded-lg px-2 md:px-5 py-2 text-xs xl:text-sm text-white uppercase font-bold"
@@ -69,6 +70,7 @@ export default function Header() {
                         </a>
                     ))}
                     <Button
+                        ariaLabel="Boton para acceder a la seccion de contacto"
                         element="contacto"
                         type="button"
                         className="bg-white rounded-lg px-5 py-2 text-background uppercase font-bold"
