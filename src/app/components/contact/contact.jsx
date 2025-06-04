@@ -1,7 +1,7 @@
 import { Controller, useForm } from "react-hook-form";
 import { contactSchema } from "./contact.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../button";
 import Image from "next/image";
 
@@ -62,10 +62,15 @@ export default function Contact() {
                 setSubmitMessage({ type: '', text: '' });
             }, 5000);
         }
-    }
+    } 
+    useEffect(()=>{ 
+        if(Object.keys(errors).length>0){
+            setSubmitMessage({ type: 'error', text: 'Por favor corrige los errores antes de enviar.' });
+        }
+    },[errors]);
     return (
         <section id="contact" className="flex flex-col md:flex-row justify-center items-start w-full container bg-background py-16 px-5 gap-5">
-            <div className="w-full flex flex-col justify-center items-center md:max-w-[700px] gap-8 pt-20">
+            <div className="w-full flex flex-col justify-start items-center md:max-w-[700px] gap-8">
                 <h3 className="text-white text-center text-3xl sm:text-5xl md:text-6xl font-bold tracking-tighter uppercase w-full">Solicitá tu chatbot</h3>
                 <h4 className="text-gray text-center text-sm sm:text-lg md:text-xl font-bold xs:mb-2 w-full">
                     Completá el formulario para recibir información sobre nuestros servicios de chatbot inteligente. Un representante de CORADIR IA te contactará a la brevedad.
@@ -75,10 +80,10 @@ export default function Contact() {
                     alt="Hero"
                     width={100}
                     height={100}
-                    className="w-[300px] h-[300px] object-contain bg-white rounded-full p-2"
+                    className="w-[300px] h-[300px] hidden md:block object-contain bg-white rounded-full p-2"
                 />
             </div>
-            <div className="w-full flex flex-col justify-center items-center md:max-w-[700px]">
+            <div className="w-full flex flex-col justify-center items-center md:max-w-[700px] bg-[#111]/50 p-6 rounded-xl">
                 {submitMessage.text && (
                     <div className={`mb-6 p-4 rounded-md ${submitMessage.type === 'success' ? 'bg-green-900/30 text-green-400' : 'bg-red-900/30 text-red-400'}`}>
                         {submitMessage.text}
@@ -90,7 +95,7 @@ export default function Contact() {
                         <div className="w-full p-4" key={name}>
                             <Controller 
                                 name={name} 
-                                control={form.control} 
+                                control={control} 
                                 render={({ field }) => (
                                 <input
                                     type={type}
@@ -117,7 +122,7 @@ export default function Contact() {
                     <div className="w-full p-4">
                         <Controller
                             name="description"
-                            control={form.control}
+                            control={control}
                             render={({ field }) => (
                                 <>
                                 <textarea
@@ -126,7 +131,7 @@ export default function Contact() {
                                     onChange={field.onChange}
                                     rows="4"
                                     placeholder="¿Cómo te gustaría que te ayudemos con un chatbot? (opcional)"
-                                    className={`block w-full p-4 bg-transparent text-white border-b-2 outline-none placeholder:text-gray-500 resize-none transition-all
+                                    className={`block w-full bg-transparent p-2 text-white border-b-2 outline-none placeholder:text-gray-500 resize-none transition-all
                                         ${errors.description 
                                         ? 'border-red-500 focus:border-red-400' 
                                         : 'border-white focus:border-[#828282]'}
@@ -146,7 +151,7 @@ export default function Contact() {
                         <Button
                             type="submit"
                             disabled={isSubmitting}
-                            className="bg-white rounded-full px-1 sm:px-5 py-3 w-56 text-background sm:h-10 ml-5 sm:ml-16 text-xs sm:text-sm hover:bg-white/80 hover:shadow-[0_0_15px_rgba(0,0,0,0.4)]"
+                            className="bg-white rounded-full px-1 sm:px-5 py-3 w-56 text-background sm:h-10 text-xs sm:text-sm hover:bg-white/80 hover:shadow-[0_0_15px_rgba(0,0,0,0.4)]"
                             element={ isSubmitting ? 'Enviando...' : 'Enviar solicitud'}
                         />
                     </div>

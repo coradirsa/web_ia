@@ -22,7 +22,7 @@ export const contactSchema = z.object({
     ),
     description: z.preprocess(emptyStringToUndefined,
         z.string()
-            .max(100, "La descripción no debe exceder los 100 caracteres.")
+            .max(500, "La descripción no debe exceder los 500 caracteres.")
             .optional()
     ),
 });
