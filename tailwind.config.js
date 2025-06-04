@@ -11,7 +11,8 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         blueligth: "var(--color-blueligth)",
-        gray: "var(--color-gray)"
+        gray: "var(--color-gray)",
+        grayDark: "var(--color-gray-dark)",
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],

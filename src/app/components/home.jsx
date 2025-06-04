@@ -27,7 +27,7 @@ export default function Home() {
                     ariaLabel="Boton para acceder a mas información sobre inteligencia artificial"
                     element={<a href="#contact" aria-label="Boton para acceder a mas información sobre inteligencia artificial">mas información</a>}
                     type="button"
-                    className=" bg-background rounded-full px-0 py-2 text-white text-md w-52 hover:bg-black/80 "
+                    className=" bg-gray rounded-full px-0 py-2 text-white text-md w-52 hover:bg-grayDark  shadow-[0_0_15px_rgba(255,255,255,0.9)]"
                 />
             </div>
         </section>

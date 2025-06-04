@@ -15,6 +15,7 @@
   --color-black: #000000;
   --color-blueligth: #4a5e63;
   --color-gray: #4d6066;
+  --color-gray-dark: #2c3538;
 }
 
 @media (prefers-color-scheme: dark) {
