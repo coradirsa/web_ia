@@ -69,21 +69,11 @@ export default function Contact() {
         }
     },[errors]);
     return (
-        <section id="contact" className="flex flex-col md:flex-row justify-center items-start w-full container bg-background py-16 px-5 gap-5">
-            <div className="w-full flex flex-col justify-start items-center md:max-w-[700px] gap-8">
+        <section id="contact" className="flex flex-col justify-center items-center w-full container bg-background py-16 px-5 gap-5"> 
                 <h3 className="text-white text-center text-3xl sm:text-5xl md:text-6xl font-bold tracking-tighter uppercase w-full">Solicitá tu chatbot</h3>
                 <h4 className="text-gray text-center text-sm sm:text-lg md:text-xl font-bold xs:mb-2 w-full">
                     Completá el formulario para recibir información sobre nuestros servicios de chatbot inteligente. Un representante de CORADIR IA te contactará a la brevedad.
-                </h4>
-                <Image 
-                    ariaLabel="logo-chatbot"
-                    src="/img/chatbot.webp"
-                    alt="logo-chatbot"
-                    width={100}
-                    height={100}
-                    className="w-[300px] h-[300px] hidden md:block object-contain bg-white rounded-full p-2"
-                />
-            </div>
+                </h4> 
             <div className="w-full flex flex-col justify-center items-center md:max-w-[700px] bg-[#111]/50 p-6 rounded-xl">
                 {submitMessage.text && (
                     <div className={`mb-6 p-4 rounded-md ${submitMessage.type === 'success' ? 'bg-green-900/30 text-green-400' : 'bg-red-900/30 text-red-400'}`}>
