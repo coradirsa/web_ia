@@ -1,14 +1,27 @@
 import Button from "./button";
-
+import Image from "next/image";
 export default function Home() {
     return (
-        <section id="home" className="w-full min-h-[100vh] -mt-32  md:pt-40 px-10 xl:px-20
-            bg-[url('/img/01.webp')] bg-cover xs:bg-center bg-no-repeat 
-            flex justify-start items-center py-10
+        <section id="home" className="w-full min-h-[30vh] md:min-h-[100vh] md:-mt-32  pt-40 px-3 md:px-10 xl:px-20 
+            flex justify-start items-center py-10  
+            relative
         ">
-            <div className="flex flex-col gap-2 md:gap-5  w-full md:w-1/2">
-                <h2 className="text-white text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter uppercase" >Inteligencia artificial que impulsa el éxito</h2>
-                <p className="text-white textmdm sm:text-xl mb-10 sx:w-96">Desarrollamos soluciones inteligentes que responden por vos. <br/>
+            <Image
+              loading="lazy"
+              aria-label="Fondo banner"
+              src="/img/01.webp"
+              alt="Fondo banner"
+              width={1000}
+              height={1000}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="relative z-1 flex flex-col gap-2 md:gap-5  md:w-1/2">
+                <h2 className="text-white text-xl sm:text-4xl md:text-5xl w-full font-bold tracking-tighter uppercase" >
+                    Dominá el futuro con IA:<br/>
+                    Algorimos que venden,<br/>
+                    resultados que escalan.
+                </h2>
+                <p className="text-white text-xs sm:text-xl mb-10  ">Desarrollamos soluciones inteligentes que responden por vos. <br/>
                 Inteligencia Artificial eficiente a tu alcance.</p>
                 <Button 
                     ariaLabel="Boton para acceder a mas información sobre inteligencia artificial"

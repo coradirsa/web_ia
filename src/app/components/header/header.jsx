@@ -10,7 +10,7 @@ export default function Header() {
         { href: "#solutions", text: "soluciones" },
     ]; 
     const { scrollY } = useScroll(); 
-    const isMobile = useMediaQuery("(max-width: 700px)"); 
+    const isMobile = useMediaQuery("(max-width: 768px)"); 
     if(isMobile) return null; 
   return ( 
     <header className={`flex items-center justify-between container w-full h-20 gap-3 xl:gap-10 p-5 py-16 pb-10 top-0 z-50 sticky transition-all duration-300 ease-in-out
