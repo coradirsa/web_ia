@@ -20,6 +20,7 @@ export default function Products() {
                     />
                 </div>
                 <Image 
+                    loading="lazy"
                     ariaLabel="Mujer con telefono"
                     src="/img/woman-whit-phone.webp"
                     alt="Mujer con telefono"

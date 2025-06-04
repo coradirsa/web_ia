@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin } from "lucide-react"; 
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -15,9 +15,33 @@ export default function Footer() {
                     ilustrativo y pueden diferir del producto real.
                 </span>
                 <span className="flex items-center justify-center md:justify-start gap-3 pl-2 text-white">
-                    <Facebook className="w-6 h-6" />
-                    <Linkedin className="w-6 h-6" />
-                    <Instagram className="w-6 h-6" />
+                    <Image       
+                        loading="lazy"
+                        ariaLabel="Logo de Facebook"
+                        src="/icons/facebook.png"
+                        alt="Logo de Facebook"
+                        width={600}
+                        height={600}
+                        className="w-6 h-6"
+                    />
+                   <Image       
+                        loading="lazy"
+                        ariaLabel="Logo de LinkedIn"
+                        src="/icons/linkedin.png"
+                        alt="Logo de LinkedIn"
+                        width={600}
+                        height={600}
+                        className="w-6 h-6"
+                    />
+                    <Image       
+                        loading="lazy"
+                        ariaLabel="Logo de Instagram"
+                        src="/icons/instagram.png"
+                        alt="Logo de Instagram"
+                        width={600}
+                        height={600}
+                        className="w-6 h-6"
+                    />
                 </span>
             </div>
             <div className="flex flex-col gap-2">

@@ -6,6 +6,7 @@ export default function CardSolutions({icon, title, description}) {
         border-l-[2px] border-r-[2px] border-gray rounded-3xl box-fade-vertical xl:min-h-96 
         ">
             <Image 
+                loading="lazy"
                 ariaLabel={`icono-${title}`}
                 src={icon}
                 alt={`icono-${title}`}

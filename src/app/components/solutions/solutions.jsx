@@ -1,26 +1,24 @@
 import Image from "next/image";
-import CardSolutions from "./components/cardSolutions";
-import { CircleCheck } from "lucide-react";
-
+import CardSolutions from "./components/cardSolutions"; 
 export default function Solutions() {
     const cards = [
         {
-            icon: "/icons/ahorro2.webp",
+            icon: "/icons/ahorro2.png",
             title: "Ahorro de tiempo",
             description: "Libera tiempo valioso a tu equipo para que pueda ocuparse de interacciones mas complejas."
         },
         {
-            icon: "/icons/personalizacion2.webp",
+            icon: "/icons/personalizacion2.png",
             title: "100% personalizable",
             description: "Se adapta completamente a tus necesidades, objetivos e identidad de marca."
         },
         {
-            icon: "/icons/automatizacion.webp",
+            icon: "/icons/automatizacion.png",
             title: "Automatización de respuestas",
             description: "Rsponde instantáneamente a preguntas frecuentes, incluso fuera del horario comercial."
         },
         {
-            icon: "/icons/integracion.webp",
+            icon: "/icons/integracion.png",
             title: "Integración completa",
             description: "Se conecta con diferentes plataformas o eplicaciones para una gestion integreal."
         },
@@ -53,6 +51,7 @@ export default function Solutions() {
                 <h3 className="text-background text-3xl sm:text-5xl md:text-6xl font-bold tracking-tighter uppercase w-full">Soluciones infinitas</h3> 
                 <div className="relative flex items-center justify-start p-5 w-full overflow-hidden">
                     <Image 
+                        loading="lazy"
                         ariaLabel="Imagen de chat con un chatbot"
                         src="/img/chat.webp"
                         alt="Imagen de chat con un chatbot"
@@ -67,7 +66,15 @@ export default function Solutions() {
                         {
                             solutions.map((solution, index) => (
                                 <div key={index} className="flex justify-start items-center gap-5 w-full">
-                                    <CircleCheck className="text-white w-14 h-14 md:w-24 md:h-24"/>
+                                    <Image       
+                                        loading="lazy"
+                                        ariaLabel="Logo de Check"
+                                        src="/icons/chequed.png"
+                                        alt="Logo de Check"
+                                        width={600}
+                                        height={600}
+                                        className="w-14 h-14 md:w-24 md:h-24"
+                                    /> 
                                     <div className="w-full">
                                         <h4 className="text-black text-sm md:text-2xl font-bold uppercase">{solution.title}</h4>
                                         <p className="text-black text-xs md:text-sm">{solution.description}</p>
