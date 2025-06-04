@@ -52,7 +52,7 @@ export default function Solutions() {
                 <div className="relative flex items-center justify-start p-5 w-full overflow-hidden">
                     <Image 
                         loading="lazy"
-                        ariaLabel="Imagen de chat con un chatbot"
+                        aria-label="Imagen de chat con un chatbot"
                         src="/img/chat.webp"
                         alt="Imagen de chat con un chatbot"
                         width={400}
@@ -68,7 +68,7 @@ export default function Solutions() {
                                 <div key={index} className="flex justify-start items-center gap-5 w-full">
                                     <Image       
                                         loading="lazy"
-                                        ariaLabel="Logo de Check"
+                                        aria-label="Logo de Check"
                                         src="/icons/chequed.png"
                                         alt="Logo de Check"
                                         width={600}

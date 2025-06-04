@@ -2,7 +2,7 @@ import Button from "./button";
 
 export default function Home() {
     return (
-        <section id="home" className="w-full min-h-[100vh] -mt-32  md:pt-40 px-10
+        <section id="home" className="w-full min-h-[100vh] -mt-32  md:pt-40 px-10 xl:px-20
             bg-[url('/img/01.webp')] bg-cover xs:bg-center bg-no-repeat 
             flex justify-start items-center py-10
         ">

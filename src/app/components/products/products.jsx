@@ -3,7 +3,7 @@ import Button from "../button";
 
 export default function Products() {
     return(
-        <section id="products" className="flex flex-col justify-start items-center w-full  bg-white p-5 xs:p-10 xs:gap-4 py-15">
+        <section id="products" className="flex flex-col justify-start items-center w-full  bg-white p-5 xs:p-10 xl:px-20 xs:gap-4 py-24">
             <h3 className="text-background text-3xl sm:text-5xl md:text-6xl font-bold tracking-tighter uppercase w-full">Explorá la ia conversacional</h3>
             <h4 className="text-gray text-lg sm:text-xl md:text-3xl font-bold italic uppercase xs:mb-2 w-full">Chatbot inteligente</h4>
             <div className="flex flex-col items-center xl:flex-row justify-center md:justify-between w-full py-5 xs:py-10">
@@ -21,12 +21,12 @@ export default function Products() {
                 </div>
                 <Image 
                     loading="lazy"
-                    ariaLabel="Mujer con telefono"
+                    aria-label="Mujer con telefono"
                     src="/img/woman-whit-phone.webp"
                     alt="Mujer con telefono"
                     width={600}
                     height={600}
-                    className="rounded-3xl shadow-[9px_-8px_10px_1px_gray]"
+                    className="w-[600px] h-[300px] rounded-[56px] shadow-[9px_-8px_10px_1px_gray]"
                 />
             </div>
         </section>

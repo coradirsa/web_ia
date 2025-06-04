@@ -7,7 +7,7 @@ export default function CardSolutions({icon, title, description}) {
         ">
             <Image 
                 loading="lazy"
-                ariaLabel={`icono-${title}`}
+                aria-label={`icono-${title}`}
                 src={icon}
                 alt={`icono-${title}`}
                 width={100}

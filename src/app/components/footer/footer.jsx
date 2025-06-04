@@ -17,7 +17,7 @@ export default function Footer() {
                 <span className="flex items-center justify-center md:justify-start gap-3 pl-2 text-white">
                     <Image       
                         loading="lazy"
-                        ariaLabel="Logo de Facebook"
+                        aria-label="Logo de Facebook"
                         src="/icons/facebook.png"
                         alt="Logo de Facebook"
                         width={600}
@@ -26,7 +26,7 @@ export default function Footer() {
                     />
                    <Image       
                         loading="lazy"
-                        ariaLabel="Logo de LinkedIn"
+                        aria-label="Logo de LinkedIn"
                         src="/icons/linkedin.png"
                         alt="Logo de LinkedIn"
                         width={600}
@@ -35,7 +35,7 @@ export default function Footer() {
                     />
                     <Image       
                         loading="lazy"
-                        ariaLabel="Logo de Instagram"
+                        aria-label="Logo de Instagram"
                         src="/icons/instagram.png"
                         alt="Logo de Instagram"
                         width={600}

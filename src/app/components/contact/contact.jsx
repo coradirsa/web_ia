@@ -71,7 +71,7 @@ export default function Contact() {
     return (
         <section id="contact" className="flex flex-col justify-center items-center w-full container bg-background py-16 px-5 gap-5"> 
                 <h3 className="text-white text-center text-3xl sm:text-5xl md:text-6xl font-bold tracking-tighter uppercase w-full">Solicitá tu chatbot</h3>
-                <h4 className="text-gray text-center text-sm sm:text-lg md:text-xl font-bold xs:mb-2 w-full">
+                <h4 className="text-gray text-center text-sm sm:text-lg md:text-xl md:px-44 font-bold xs:mb-2 w-full">
                     Completá el formulario para recibir información sobre nuestros servicios de chatbot inteligente. Un representante de CORADIR IA te contactará a la brevedad.
                 </h4> 
             <div className="w-full flex flex-col justify-center items-center md:max-w-[700px] bg-[#111]/50 p-6 rounded-xl">
