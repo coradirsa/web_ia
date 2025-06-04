@@ -9,14 +9,14 @@ export default function Header() {
         { href: "#", text: "inicio" },
         { href: "#products", text: "productos" },
         { href: "#solutions", text: "soluciones" },
-        { href: "#aboutus", text: "nosotros" },
     ]; 
     const { scrollY } = useScroll(); 
     const isMobile = useMediaQuery("(max-width: 700px)"); 
     const [menuOpen, setMenuOpen] = useState(false);
+    if(isMobile == undefined) return null; 
   return (
     <>
-    <header className={`flex items-center justify-between container w-full gap-3 xl:gap-10 p-5 py-5 top-0 z-50 sticky transition-all duration-300 ease-in-out
+    <header className={`flex items-center justify-between container w-full gap-3 xl:gap-10 p-5 py-16 pb-10 top-0 z-50 sticky transition-all duration-300 ease-in-out
         ${scrollY > 0 && !menuOpen ? "bg-black/30 backdrop-blur-md shadow-lg" : ""}
         ${isMobile ? "h-16" : "h-20"}`}
 
@@ -27,13 +27,13 @@ export default function Header() {
         </div>
         {
             !isMobile ? (
-                <div className="flex items-center gap-3 xl:gap-10">
+                <div className="flex items-center  justify-end  w-full">
                     {navlinks.map((link, index) => (
                         <NavLink key={index} href={link.href} text={link.text} isBarrer={index !== navlinks.length - 1}/>
                     ))}
                     <Button 
                         ariaLabel="Boton para acceder a la seccion de contacto"
-                        element="contacto"
+                        element={<a href="#contact" aria-label="Boton para acceder al formulario de contacto">contacto</a>}
                         type="button"
                         className="bg-background rounded-lg px-2 md:px-5 py-2 text-xs xl:text-sm text-white uppercase font-bold"
                     />
@@ -71,7 +71,7 @@ export default function Header() {
                     ))}
                     <Button
                         ariaLabel="Boton para acceder a la seccion de contacto"
-                        element="contacto"
+                        element={<a href="#contact" aria-label="Boton para acceder al formulario de contacto">contacto</a>}
                         type="button"
                         className="bg-white rounded-lg px-5 py-2 text-background uppercase font-bold"
                     />
