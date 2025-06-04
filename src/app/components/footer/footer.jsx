@@ -45,7 +45,7 @@ export default function Footer() {
                 </span>
             </div>
             <div className="flex flex-col gap-2">
-                <h5 className="text-xl xl:text-3xl uppercase font-bold text-white">Enllaces rápidos</h5>
+                <h5 className="text-xl xl:text-3xl uppercase font-bold text-white">Enlaces rápidos</h5>
                 <span className="md:pl-2 text-sm xl:text-lg text-white">
                     <Link className="hover:underline cursor-pointer" href="#aboutus">Sobre nosotros</Link>
                 </span>

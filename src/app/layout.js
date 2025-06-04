@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className="bg-background font-montserrat">
+      <body className="bg-background font-montserrat scroll-smooth">
         {children}
       </body>
     </html>
