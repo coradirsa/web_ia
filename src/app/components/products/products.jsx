@@ -14,7 +14,7 @@ export default function Products() {
                     </p>
                     <Button 
                         ariaLabel="Boton para acceder a la seccion de contacto"
-                        element="Quiero un chatbot" 
+                        element={<a href="#contact" aria-label="Boton para acceder a mas información sobre inteligencia artificial">Quiero un chatbot</a>} 
                         type="button" 
                         className="relative bg-background rounded-full px-1 sm:px-5 py-1 w-56 text-white sm:h-10 ml-5 sm:ml-16 text-md hover:bg-black hover:shadow-[0_0_15px_rgba(0,0,0,0.4)]"
                     />

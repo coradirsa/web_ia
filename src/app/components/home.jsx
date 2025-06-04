@@ -12,7 +12,7 @@ export default function Home() {
                 Inteligencia Artificial eficiente a tu alcance.</p>
                 <Button 
                     ariaLabel="Boton para acceder a mas información sobre inteligencia artificial"
-                    element="mas información"
+                    element={<a href="#contact" aria-label="Boton para acceder a mas información sobre inteligencia artificial">mas información</a>}
                     type="button"
                     className=" bg-background rounded-full px-0 py-2 text-white text-md w-52 hover:bg-black/80 "
                 />
