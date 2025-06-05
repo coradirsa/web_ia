@@ -2,7 +2,7 @@ import Button from "./button";
 import Image from "next/image";
 export default function Home() {
     return (
-        <section id="home" className="w-full min-h-[30vh] md:min-h-[100vh] md:-mt-32  pt-40 px-3 md:px-10 xl:px-20 
+        <section id="home" className="container w-full min-h-[30vh] md:min-h-[100vh] md:-mt-32  pt-40 px-3 md:px-10 xl:px-20 
             flex justify-start items-center py-10  
             relative
         ">
