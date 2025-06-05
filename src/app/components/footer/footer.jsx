@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return(
-        <footer className="grid text-center md:text-left grid-cols-1 gap-10  md:grid-cols-3 md:gap-2 w-full container bg-blueligth py-8 px-10 rounded-t-2xl">
+        <footer className="grid text-center md:text-left grid-cols-1 gap-10  md:grid-cols-2 md:gap-2   w-full container bg-blueligth py-8 px-10 rounded-t-2xl">
             <div className="flex flex-col gap-2">
                 <h5 className="text-xl xl:text-3xl uppercase font-bold text-white">iacor</h5>
                 <span className="md:pl-2 text-sm xl:text-lg text-white">
@@ -11,7 +11,7 @@ export default function Footer() {
                     © 2025 IACOR. Todos los derechos reservados.
                 </span>
                 <span className="md:pl-2 text-sm xl:text-lg text-white mb-4">
-                    Las imaggenes mostradas son solo a titulo<br/>
+                    Las imágenes mostradas son solo a titulo<br/>
                     ilustrativo y pueden diferir del producto real.
                 </span>
                 <span className="flex items-center justify-center md:justify-start gap-3 pl-2 text-white">
@@ -45,16 +45,7 @@ export default function Footer() {
                 </span>
             </div>
             <div className="flex flex-col gap-2">
-                <h5 className="text-xl xl:text-3xl uppercase font-bold text-white">Enlaces rápidos</h5>
-                <span className="md:pl-2 text-sm xl:text-lg text-white">
-                    <Link className="hover:underline cursor-pointer" href="#aboutus">Sobre nosotros</Link>
-                </span>
-                <span className="md:pl-2 text-sm xl:text-lg text-white">
-                    <Link className="hover:underline cursor-pointer" href="#contact">Contacto</Link>
-                </span>
-            </div>
-            <div className="flex flex-col gap-2">
-            <h5 className="text-xl xl:text-3xl uppercase font-bold text-white">Nuestros sitios</h5>
+                <h5 className="text-xl xl:text-3xl uppercase font-bold text-white">Nuestros sitios</h5>
                 <span className="md:pl-2 text-sm xl:text-lg text-white">
                     <a className="hover:underline cursor-pointer" href="#aboutus">CORADIR S.A</a>
                 </span>
