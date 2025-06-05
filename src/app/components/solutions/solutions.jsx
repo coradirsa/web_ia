@@ -21,7 +21,7 @@ export default function Solutions() {
         {
             icon: "/icons/integracion.png",
             title: "Integración completa",
-            description: "Se conecta con diferentes plataformas o eplicaciones para una gestion integreal."
+            description: "Se conecta con diferentes plataformas o aplicaciones para una gestión integral."
         },
     ];
     

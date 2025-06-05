@@ -1,10 +1,10 @@
 import Image from "next/image";
 export default function SolutionPanel() {
     const solutions = [
-            { title: "Atención al cliente:", description: "Automatización frecuentes 24/7" },
-            { title: "Recopilación de datos:", description: "Captura y medición datos de clientes" },
-            { title: "Live chat:", description: "Transferencia de las conversaciones automatizadas a un asesor humano para una asistencia más personalizada" },
-            { title: "Feedback:", description: "Solicitado de calificaciones a tus clientes sobre la calidad de la interacción y atención" }, 
+            { title: "Atención al cliente:", description: "Automatización respuestas frecuentes 24/7." },
+            { title: "Recopilación de datos:", description: "Captura y medición datos de clientes." },
+            { title: "Live chat:", description: "Transferencia de las conversaciones automatizadas a un asesor humano para una asistencia más personalizada." },
+            { title: "Feedback:", description: "Solicitado de calificaciones a tus clientes sobre la calidad de la interacción y atención." }, 
             
         ];
     return(
