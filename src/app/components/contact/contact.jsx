@@ -1,7 +1,7 @@
 import { Controller, useForm } from "react-hook-form";
 import { contactSchema } from "./contact.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "../button";
 import Image from "next/image";
 
@@ -62,12 +62,22 @@ export default function Contact() {
                 setSubmitMessage({ type: '', text: '' });
             }, 5000);
         }
-    } 
-    useEffect(()=>{ 
-        if(Object.keys(errors).length>0){
-            setSubmitMessage({ type: 'error', text: 'Por favor corrige los errores antes de enviar.' });
+    };
+    const inputRefs = {
+        name: useRef(null),
+        email: useRef(null),
+        phone: useRef(null),
+        website: useRef(null),
+        description: useRef(null),
+    };
+    useEffect(() => {
+        if (Object.keys(errors).length > 0) {
+          const firstError = Object.keys(errors)[0];
+          if (inputRefs[firstError] && inputRefs[firstError].current) {
+            inputRefs[firstError].current.focus();
+          }
         }
-    },[errors]);
+    }, [errors]);
     return (
         <section id="contact" className="flex flex-col justify-center items-center w-full container bg-background py-16 px-5 gap-5"> 
                 <h3 className="text-white text-center text-3xl sm:text-5xl md:text-6xl font-bold tracking-tighter uppercase w-full">Solicitá tu chatbot</h3>
@@ -91,6 +101,7 @@ export default function Contact() {
                                 <input
                                     type={type}
                                     name={name}
+                                    ref={inputRefs[name]}
                                     value={field.value}
                                     onChange={field.onChange}
                                     onBlur={field.onBlur}
@@ -127,6 +138,7 @@ export default function Contact() {
                                         ? 'border-red-500 focus:border-red-400' 
                                         : 'border-white focus:border-[#828282]'}
                                     `}
+                                    ref={inputRefs.description}
                                 />
                                 <p className="text-red-400 text-sm mt-2 h-5"> {errors.description && (errors.description.message)}</p>
                                 <p className="text-gray  text-xs mt-2">
