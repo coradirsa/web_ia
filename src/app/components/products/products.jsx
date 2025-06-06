@@ -7,7 +7,7 @@ export default function Products() {
             <h3 className="text-background text-xl sm:text-3xl md:text-4xl xl:text-5xl text-center md:text-start font-bold tracking-tighter uppercase w-full">Explorá la ia conversacional</h3>
             <h4 className="text-gray text-xs sm:text-xl md:text-2xl text-center md:text-start font-bold italic uppercase  mb-4 md:mb-2 w-full">Chatbots inteligentes para atenciòn y ventas 24/7</h4>
             <div className="flex flex-row md:gap-10 items-end md:items-center justify-center w-full py-5 px-3">
-                <div className="flex flex-col justify-center w-full h-full min-w-[65%] my-10 md:my-0 pr-5 md:pr-0">
+                <div className="flex flex-col justify-center w-full h-full min-w-[65%] md:min-w-[50%] my-10 md:my-0 pr-5 md:pr-0">
                     <p className="text-black text-sm lg:text-2xl md:px-3 p-5 border-l-[1px] border-r-[1px] border-gray text-left pr-10 rounded-3xl -m-3 sm:-mb-4 box-fade-vertical py-8 tracking-wide">
                         <span className="block -mr-5">Mejorá la comunicación con tus clientes de una forma más eficiente de compra y asegurá tu éxito.</span><br className="md:hidden"/>
                         <span className="w-full block">Diseñá tu ChatBot acorde a tus necesidades y marcá la diferencia ahora.</span>
@@ -27,7 +27,7 @@ export default function Products() {
                         alt="Mujer con telefono"
                         width={600}
                         height={600}
-                        className="w-full h-[10em] md:h-[12em] xl:w-full xl:h-[300px] rounded-[20px] xl:rounded-[56px] shadow-[3px_-2px_5px_1px_gray] md:shadow-[9px_-8px_10px_1px_gray]"
+                        className="w-full h-[10em] md:h-[12em] xl:h-[300px] rounded-[20px] xl:rounded-[56px] shadow-[3px_-2px_5px_1px_gray] md:shadow-[9px_-8px_10px_1px_gray]"
                     />
                     <span 
                         className="text-center uppercase font-bold flex items-center justify-center -mt-10 md:hidden relative bg-gradient-to-t from-black via-black to-transparent rounded-bl-[20px] rounded-br-[20px] xl:px-1 py-1 w-full xl:w-56 text-white h-10 text-xs sm:text-md xl:text-md"
