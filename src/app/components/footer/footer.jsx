@@ -4,7 +4,7 @@ export default function Footer() {
     //links de nuestros sitios
     const links = [
         { href: "https://www.coradir.com.ar/", text: "CORADIR S.A" },
-        { href: "https://movilidad.coradir.com.ar/", text: "Movilidad Electrica" },
+        { href: "https://movilidad.coradir.com.ar/", text: "Movilidad Eléctrica" },
         { href: "https://homes.coradir.com.ar/", text: "Coradir Homes" },
         { href: "https://energia.coradir.com.ar/", text: "Energía Renovable" },
         { href: "#", text: "Coradir Seguridad" },
@@ -23,7 +23,7 @@ export default function Footer() {
                     © 2025 IACOR. Todos los derechos reservados.
                 </span>
                 <span className="md:pl-2 text-sm xl:text-lg text-white mb-4">
-                    Las imágenes mostradas son solo a titulo<br/>
+                    Las imágenes mostradas son sólo a título<br/>
                     ilustrativo y pueden diferir del producto real.
                 </span>
                 <span className="flex items-center justify-center md:justify-start gap-3 pl-2 text-white">

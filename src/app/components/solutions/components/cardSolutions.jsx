@@ -12,7 +12,7 @@ export default function CardSolutions({icon, title, description}) {
                 alt={`icono-${title}`}
                 width={100}
                 height={100}
-                className="w-10 h-10"
+                className="w-20 h-20"
             />
             <h4 className="text-background text-sm xl:text-xl font-bold uppercase text-center">{title}</h4>
             <span className="w-full h-[2px] bg-background"></span>

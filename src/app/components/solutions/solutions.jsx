@@ -16,7 +16,7 @@ export default function Solutions() {
         {
             icon: "/icons/automatizacion.png",
             title: "Automatización de respuestas",
-            description: "Rsponde instantáneamente a preguntas frecuentes, incluso fuera del horario comercial."
+            description: "Responde instantáneamente a preguntas frecuentes, incluso fuera del horario comercial."
         },
         {
             icon: "/icons/integracion.png",
