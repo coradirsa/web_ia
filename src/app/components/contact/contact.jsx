@@ -50,6 +50,10 @@ export default function Contact() {
             if (!response.ok) {
                 throw new Error(`Error HTTP: ${response.status}`);
             }
+            setSubmitMessage({
+                type: 'success',
+                text: '¡Gracias por tu interés! Hemos recibido tu solicitud y te contactaremos pronto.',
+            });
         } catch (error) {
             console.error('Error al enviar datos a n8n:', error);
             setSubmitMessage({
@@ -72,6 +76,10 @@ export default function Contact() {
     };
     useEffect(() => {
         if (Object.keys(errors).length > 0) {
+            setSubmitMessage({
+                type: 'error',
+                text: 'Por favor corrige los errores antes de enviar.',
+            });
           const firstError = Object.keys(errors)[0];
           if (inputRefs[firstError] && inputRefs[firstError].current) {
             inputRefs[firstError].current.focus();
