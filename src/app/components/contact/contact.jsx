@@ -11,7 +11,7 @@ export default function Contact() {
         { name: 'email', placeholder: 'Correo electrónico *', type: 'email' },
         { name: 'phone', placeholder: 'Teléfono (opcional)', type: 'tel' },
         { name: 'website', placeholder: 'https://www.sitio.com (opcional)', type: 'url' },
-    ];
+    ]; 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitMessage, setSubmitMessage] = useState({ type: '', text: '' });
     const form = useForm({
@@ -32,14 +32,14 @@ export default function Contact() {
         const dataToSend = {
             name: data.name.trim(),
             email: data.email.trim().toLowerCase(),
-            phone: data.phone.trim() || null,
-            website: data.website.trim() || null,
-            description: data.description.trim() || null,
+            phone: data.phone?.trim() || null,
+            website: data.website?.trim() || null,
+            description: data.description?.trim() || null,
             timestamp: new Date().toISOString(),
             source: 'website_chatbot_form'
           };
         try { 
-            const response = await fetch(N8N_WEBHOOK_URL, {
+            const response = await fetch(process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL, {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json',
