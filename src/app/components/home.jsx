@@ -23,7 +23,7 @@ export default function Home() {
                     Algorimos que venden,<br/>
                     resultados que escalan.
                 </h2>
-                <p className="text-white text-xs sm:text-xl mb-10  ">Desarrollamos soluciones inteligentes que responden por vos. <br/>
+                <p className="text-white text-xs sm:text-xl mb-10  " style={{ textShadow: "3px 3px 5px rgba(0,0,0,0.9)" }}>Desarrollamos soluciones inteligentes que responden por vos. <br/>
                 Inteligencia Artificial eficiente a tu alcance.</p>
                 <Button 
                     ariaLabel="Boton para acceder a mas información sobre inteligencia artificial"
