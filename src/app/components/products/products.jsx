@@ -3,7 +3,7 @@ import Button from "../button";
 
 export default function Products() {
     return(
-        <section id="products" className="flex flex-col container justify-start items-center w-full bg-white p-5 px-3 md:px-10 xl:px-20 xs:gap-4  md:py-24">
+        <section id="products" className="flex flex-col container justify-start items-center w-full bg-white p-5 px-3 md:px-10 xl:px-20 md:pt-28 xs:gap-4  md:py-24">
             <h3 className="text-background text-xl sm:text-3xl md:text-4xl xl:text-5xl text-center md:text-start font-bold tracking-tighter uppercase w-full">Explorá la ia conversacional</h3>
             <h4 className="text-gray text-xs sm:text-xl md:text-2xl text-center md:text-start font-bold italic uppercase  mb-4 md:mb-2 w-full">Chatbots inteligentes para atención y ventas 24/7</h4>
             <div className="flex flex-row md:gap-10 items-end md:items-center justify-center w-full py-5 px-3">

@@ -26,7 +26,7 @@ export default function Solutions() {
     ];
     
     return(
-        <section id="solutions" className="flex flex-col justify-start items-center w-full container bg-white py-15">
+        <section id="solutions" className="flex flex-col justify-start items-center w-full container bg-white py-15 md:pt-28">
             <h3 className="text-white bg-background text-2xl sm:text-3xl md:text-5xl py-5
             font-bold tracking-tighter uppercase w-full text-center shadow-[0_-10px_15px_rgba(0,0,0,0.4)]"
             >Beneficios al instante</h3> 
