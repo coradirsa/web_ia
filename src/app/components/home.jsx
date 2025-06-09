@@ -7,22 +7,21 @@ export default function Home() {
             relative
         ">
             <Image
-              loading="lazy"
-              aria-label="Fondo banner"
+              aria-label="Fondo banner principal con inteligencia artificial"
               src="/img/01.webp"
-              alt="Fondo banner"
+              alt="Fondo de banner principal mostrando tecnología de inteligencia artificial"
               width={1000}
               height={1000}
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="relative z-1 flex flex-col gap-2 md:gap-5  md:w-1/2">
-                <h2 className="text-white text-xl sm:text-4xl md:text-5xl w-full font-bold tracking-tighter uppercase" 
+                <h1 className="text-white text-xl sm:text-4xl md:text-5xl w-full font-bold tracking-tighter uppercase" 
                     style={{ textShadow: "3px 3px 5px rgba(0,0,0,0.9)" }}
                 >
                     Dominá el futuro con IA:<br/>
-                    Algorimos que venden,<br/>
+                    Algoritmos que venden,<br/>
                     resultados que escalan.
-                </h2>
+                </h1>
                 <p className="text-white text-xs sm:text-xl mb-10  " style={{ textShadow: "3px 3px 5px rgba(0,0,0,0.9)" }}>Desarrollamos soluciones inteligentes que responden por vos. <br/>
                 Inteligencia Artificial eficiente a tu alcance.</p>
                 <Button 
