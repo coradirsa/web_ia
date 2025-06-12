@@ -11,7 +11,7 @@ export default function Footer() {
     ]; 
     const socialMedia = [
         { href: "https://www.facebook.com/CoradirSA/", img:"/icons/facebook.png", ariaLabel:"Logo de Facebook", alt:"Logo de Facebook" },
-        { href: "#", img:"/icons/linkedin.png", ariaLabel:"Logo de LinkedIn", alt:"Logo de LinkedIn" },
+        { href: "https://www.linkedin.com/company/502705", img:"/icons/linkedin.png", ariaLabel:"Logo de LinkedIn", alt:"Logo de LinkedIn" },
         { href: "#", img:"/icons/instagram.png", ariaLabel:"Logo de Instagram", alt:"Logo de Instagram" },
     ];
     return(
