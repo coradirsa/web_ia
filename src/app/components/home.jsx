@@ -7,6 +7,8 @@ export default function Home() {
             relative
         ">
             <Image
+              loading="eager"
+              priority
               aria-label="Fondo banner principal con inteligencia artificial"
               src="/img/01.webp"
               alt="Fondo de banner principal mostrando tecnología de inteligencia artificial"
