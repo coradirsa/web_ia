@@ -160,6 +160,7 @@ export default function Contact() {
                     {/* Botón de envío */}
                     <div className="w-full flex items-center justify-center">
                         <Button
+                            id="boton-iacor-contacto"
                             ariaLabel="Boton para enviar solicitud de chatbot"
                             type="submit"
                             disabled={isSubmitting}
