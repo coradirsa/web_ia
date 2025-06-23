@@ -1,9 +1,10 @@
+"use client"
 import { Controller, useForm } from "react-hook-form";
 import { contactSchema } from "./contact.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect, useRef, useState } from "react";
-import Button from "../button";
-import Image from "next/image";
+import Button from "../button"; 
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 export default function Contact() {
     const inputs = [
@@ -14,6 +15,7 @@ export default function Contact() {
     ]; 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitMessage, setSubmitMessage] = useState({ type: '', text: '' });
+    const { executeRecaptcha } = useGoogleReCaptcha();
     const form = useForm({
         resolver: zodResolver(contactSchema),
         defaultValues: {
@@ -29,6 +31,31 @@ export default function Contact() {
     const { handleSubmit, formState: { errors } , control} = form;
     const onSubmit = async (data) => {
         setIsSubmitting(true);
+        let token;
+        try {
+            if (!executeRecaptcha) throw new Error('Debes completar el captcha.');
+            token = await executeRecaptcha('form_submit');
+        } catch (error) {
+            setSubmitMessage({
+                type: 'error',
+                text: 'Error con el captcha. Por favor, recarga la página e intenta de nuevo.',
+            });
+            setIsSubmitting(false);
+            return;
+        }
+
+        
+        const verifyCaptcha = await fetch('/api/verify-captcha', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ token }),
+        });
+        const verifyCaptchaJson = await verifyCaptcha.json();
+        if (!verifyCaptchaJson.ok) {
+            setSubmitMessage({ type: 'error', text: verifyCaptchaJson.error });
+            setIsSubmitting(false);
+            return;
+        }
         const dataToSend = {
             name: data.name.trim(),
             email: data.email.trim().toLowerCase(),

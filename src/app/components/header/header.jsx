@@ -1,7 +1,8 @@
-import useScroll from "@/hooks/useScroll";
+ "use client"
+ import useScroll from "../../../hooks/useScroll";
 import Button from "../button";
 import NavLink from "./components/navLink";
-import { useMediaQuery } from "@/hooks/useMediaQuery"; 
+import { useMediaQuery } from "../../../hooks/useMediaQuery"; 
 
 export default function Header() {
     const navlinks = [
