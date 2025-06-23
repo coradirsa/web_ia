@@ -11,7 +11,7 @@ export default function Contact() {
         { name: 'email', placeholder: 'Correo electrónico *', type: 'email' },
         { name: 'phone', placeholder: 'Teléfono (opcional)', type: 'tel' },
         { name: 'website', placeholder: 'https://www.sitio.com (opcional)', type: 'url' },
-    ];
+    ]; 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitMessage, setSubmitMessage] = useState({ type: '', text: '' });
     const form = useForm({
@@ -32,14 +32,14 @@ export default function Contact() {
         const dataToSend = {
             name: data.name.trim(),
             email: data.email.trim().toLowerCase(),
-            phone: data.phone.trim() || null,
-            website: data.website.trim() || null,
-            description: data.description.trim() || null,
+            phone: data.phone?.trim() || null,
+            website: data.website?.trim() || null,
+            description: data.description?.trim() || null,
             timestamp: new Date().toISOString(),
             source: 'website_chatbot_form'
           };
         try { 
-            const response = await fetch(N8N_WEBHOOK_URL, {
+            const response = await fetch(process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL, {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ export default function Contact() {
         }
     }, [errors]);
     return (
-        <section id="contact" className="flex flex-col justify-center items-center w-full container bg-background py-16 px-5 gap-5"> 
+        <section id="contact" className="flex flex-col justify-center items-center w-full container bg-background py-16 px-5 gap-5 md:pt-28"> 
                 <h3 className="text-white text-center text-3xl sm:text-5xl md:text-6xl font-bold tracking-tighter uppercase w-full">Solicitá tu chatbot</h3>
                 <h4 className="text-gray text-center text-sm sm:text-lg md:text-xl md:px-44 font-bold xs:mb-2 w-full">
                     Completá el formulario para recibir información sobre nuestros servicios de chatbot inteligente. Un representante de CORADIR IA te contactará a la brevedad.

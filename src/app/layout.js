@@ -8,10 +8,6 @@ export const metadata = {
   icons: {
     icon: './favicon.ico'
   },
-  robots: {
-    index: false,
-    follow: true,
-  }
 };
 
 export default function RootLayout({ children }) {
