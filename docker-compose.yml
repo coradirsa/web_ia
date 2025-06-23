@@ -14,7 +14,7 @@ services:
       - caddy=coradir.ai
       - caddy.reverse_proxy="{{upstreams 3000}}"
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=production 
 
 networks:
   caddy:
