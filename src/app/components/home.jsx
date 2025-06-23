@@ -7,7 +7,8 @@ export default function Home() {
             relative
         ">
             <Image
-              loading="lazy"
+              loading="eager"
+              priority
               aria-label="Fondo banner"
               src="/img/01.webp"
               alt="Fondo banner"

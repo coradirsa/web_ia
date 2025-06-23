@@ -26,14 +26,14 @@ export default function RootLayout({ children }) {
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-T368DR66');`}
       </script>
-      </head>
-      <body className="bg-background font-montserrat scroll-smooth">
       {/* Google tag (gtag.js) */}
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-2YRKT46G7S"></script> 
       <script>{`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-2YRKT46G7S'); `}</script> 
+      </head>
+      <body className="bg-background font-montserrat scroll-smooth">
       {/* Google Tag Manager (noscript) */}
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T368DR66"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        height="0" width="0" style={{display:"none",visibility:"hidden"}}></iframe></noscript>
         {children}
       </body>
     </html>
