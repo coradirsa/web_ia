@@ -28,7 +28,7 @@ export default function Contact() {
         mode: "onChange",
         reValidateMode: "onChange",
     })
-    const { handleSubmit, formState: { errors } , control} = form;
+    const { handleSubmit, formState: { errors } , control, reset} = form;
     const onSubmit = async (data) => {
         setIsSubmitting(true);
         let token;
@@ -81,6 +81,9 @@ export default function Contact() {
                 type: 'success',
                 text: '¡Gracias por tu interés! Hemos recibido tu solicitud y te contactaremos pronto.',
             });
+            setTimeout(() => {
+                reset();
+            }, 5000);
         } catch (error) {
             console.error('Error al enviar datos a n8n:', error);
             setSubmitMessage({
