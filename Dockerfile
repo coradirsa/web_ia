@@ -21,5 +21,5 @@ COPY . .
 # Build con las variables ya disponibles
 RUN npm run build
 
-EXPOSE 3000
+EXPOSE 6112
 CMD ["npm", "start"]
