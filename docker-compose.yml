@@ -13,10 +13,10 @@ services:
       - caddy
     restart: always
     ports:
-      - "3000:3000"
+      - "6112:6112"
     labels:
       - caddy=coradir.ai
-      - caddy.reverse_proxy="{{upstreams 3000}}"
+      - caddy.reverse_proxy="{{upstreams 6112}}"
     environment:
       - NODE_ENV=production 
       - NEXT_PUBLIC_N8N_WEBHOOK_URL=${NEXT_PUBLIC_N8N_WEBHOOK_URL}
