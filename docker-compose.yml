@@ -15,14 +15,18 @@ services:
     ports:
       - "6112:6112"
     labels:
-      - caddy=coradir.ai
-      - caddy.reverse_proxy="{{upstreams 6112}}"
+      datos:
+        labels: 
+          proyecto: coradir-ia
+            - caddy=coradir.ai
+            - caddy.reverse_proxy="{{upstreams 6112}}"
     environment:
       - NODE_ENV=production 
       - NEXT_PUBLIC_N8N_WEBHOOK_URL=${NEXT_PUBLIC_N8N_WEBHOOK_URL}
       - NEXT_PUBLIC_RECAPTCHA_SITE_KEY=${NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
       - NEXT_PUBLIC_RECAPTCHA_SECRET_KEY=${NEXT_PUBLIC_RECAPTCHA_SECRET_KEY}
-
+volumes:
+  web-ia:
 networks:
   caddy:
     name: caddy
