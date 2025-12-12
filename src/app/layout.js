@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-background font-montserrat scroll-smooth">
         {/* Google Tag Manager (noscript) */}
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T368DR66" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T368DR66" height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
         {children}
       </body>
     </html>
