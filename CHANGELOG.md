@@ -9,7 +9,18 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
 ## [Unreleased]
 
-### 🔒 Security - 2025-12-16
+### 🔒 Security - 2025-12-16 (Update 2)
+
+#### Fixed
+- **CVE GHSA-mwcw-c2x4-8c55**: Actualizada dependencia `nanoid` 3.3.7 → 3.3.11
+  - Severity: Moderate (CVSS 4.3)
+  - Issue: Predictable results in nanoid generation when given non-integer values
+  - Impact: Potencial generación predecible de IDs en Next.js internals
+  - Fix: Actualización automática vía `npm audit fix`
+
+---
+
+### 🔒 Security - 2025-12-16 (Initial)
 
 #### Added
 - **Health Check Endpoint**: Nuevo endpoint `/api/health` para monitoreo de contenedores
