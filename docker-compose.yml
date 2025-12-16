@@ -5,27 +5,50 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      args:
-        - NEXT_PUBLIC_N8N_WEBHOOK_URL=${NEXT_PUBLIC_N8N_WEBHOOK_URL}
-        - NEXT_PUBLIC_RECAPTCHA_SITE_KEY=${NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-        - NEXT_PUBLIC_RECAPTCHA_SECRET_KEY=${NEXT_PUBLIC_RECAPTCHA_SECRET_KEY}
+      # ✅ SECRETOS ELIMINADOS DE BUILD ARGS - Ahora solo en runtime
     networks:
       - caddy
     restart: always
-    ports:
-      - "6112:6112"
-    labels: 
+    # ✅ PUERTO ELIMINADO - Caddy accede vía red interna
+    expose:
+      - "6112"
+    labels:
       - caddy=coradir.ai
       - caddy.reverse_proxy="{{upstreams 6112}}"
     environment:
-      - NODE_ENV=production 
+      - NODE_ENV=production
       - NEXT_PUBLIC_N8N_WEBHOOK_URL=${NEXT_PUBLIC_N8N_WEBHOOK_URL}
       - NEXT_PUBLIC_RECAPTCHA_SITE_KEY=${NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
       - NEXT_PUBLIC_RECAPTCHA_SECRET_KEY=${NEXT_PUBLIC_RECAPTCHA_SECRET_KEY}
     volumes:
-     - web-ia:/app/uploads
+      # ✅ VOLUMEN PRIVADO Y DEDICADO
+      - webia_uploads:/app/uploads
+    # ✅ LÍMITES DE RECURSOS - Prevención de DoS
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+    # ✅ POLÍTICAS DE SEGURIDAD
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_BIND_SERVICE
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /app/.next/cache
+
 volumes:
-  web-ia:
+  # ✅ VOLUMEN RENOMBRADO PARA EVITAR CONFLICTOS
+  webia_uploads:
+    driver: local
+
 networks:
   caddy:
     name: caddy
