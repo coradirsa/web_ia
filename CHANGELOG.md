@@ -9,6 +9,35 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
 ## [Unreleased]
 
+### 🔒 Security - 2025-12-16 (Update 3 - XSS Protection)
+
+#### Added
+- **Content Security Policy (CSP)**: Headers completos para prevenir XSS, clickjacking y code injection
+  - `script-src`: Whitelist completa de Google (Analytics, Tag Manager, Ads, reCAPTCHA)
+  - `connect-src`: Solo dominios autorizados (N8N, Google Analytics, Google Ads)
+  - `frame-src`: Solo reCAPTCHA y Google Ads permitidos
+  - `form-action`: Bloquea envío de formularios a dominios no autorizados
+  - `img-src`: Whitelist de Google services + data URIs
+- **Security Headers**: 7 headers HTTP implementados
+  - `X-Frame-Options: SAMEORIGIN` - Anti-clickjacking
+  - `X-Content-Type-Options: nosniff` - Anti-MIME sniffing
+  - `Referrer-Policy: strict-origin-when-cross-origin`
+  - `Permissions-Policy` - Deshabilita camera, microphone, geolocation
+  - `X-XSS-Protection: 1; mode=block` - Legacy XSS protection
+  - `Strict-Transport-Security` - Force HTTPS (31536000s)
+
+#### Security
+- **🔴 CRÍTICO - XSS Prevention**: CSP bloquea ejecución de scripts no autorizados
+- **🔴 CRÍTICO - Code Injection**: Headers previenen inyección de HTML/JS malicioso
+- **🔴 CRÍTICO - Open Redirect**: form-action bloquea redirects a dominios externos
+- **🟠 ALTO - Clickjacking**: X-Frame-Options previene embedding malicioso
+- **🟠 ALTO - MIME Sniffing**: Navegadores no pueden interpretar archivos incorrectamente
+
+#### Changed
+- **next.config.mjs**: Configuración async headers() con 7 security headers
+
+---
+
 ### 🔒 Security - 2025-12-16 (Update 2)
 
 #### Fixed
